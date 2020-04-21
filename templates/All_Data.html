@@ -1,0 +1,53 @@
+{% extends 'AdminBase.html' %}
+{% load static %}
+{% block title %} All Data {% endblock title %}
+{% block content %}
+<div class="container-fluid">
+<table class="table table-bordered table-striped">
+    <tr>
+        <td>id</td>
+        <td>DOA</td>
+        <td>Time</td>
+        <td>DOB</td>
+        <td>S</td>
+        <td>Course</td>
+        <td>Branch</td>
+        <td>Att</td>
+        <td>Name</td>
+        <td>Photo</td>
+        <td>F/H's</td>
+        <td>Gender</td>
+        <td>Address</td>
+        <td>Phone</td>
+        <td>Fee</td>
+        <td>Quali</td>
+        <td>CMT</td>
+        <td>Exam</td>
+    </tr>
+    {% for item in form %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.sDoa }}</td>
+        <td>{{ item.sTime }}</td>
+        <td>{{ item.sDob }}</td>
+        <td>{{ item.sSetno }}</td>
+        <td>{{ item.sCourse }}</td>
+        <td>{{ item.sBranch }}</td>
+        <td>{{ item.sAttend }}</td>
+        <td>{{ item.sName }}</td>
+        <td><img src="{% static item.sPhoto.url %}" width="50px" height="40px"> </td>
+        <td>{{ item.sPhoto }}</td>
+        <td>{{ item.sGender }}</td>
+        <td>{{ item.sAddress }}</td>
+        <td>{{ item.sPhone1 }}|{{ item.sPhone2 }}</td>
+        <td>{{ item.sFee }}</td>
+        <td>{{ item.sQualifaction }}</td>
+        <td>{{ item.sComment }}</td>
+        <td>{{ item.sExam }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</div>
+{% endblock %}

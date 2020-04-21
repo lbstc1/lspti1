@@ -1,0 +1,80 @@
+{% extends 'AdminBase.html' %}
+{% load static %}
+{% block title %} Registration Form {% endblock title %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form method="post" action="" enctype="multipart/form-data" class="form-group">
+    <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-md-10 text-center"><h2>---------- Admission Form ----------</h2></div>
+    </div>
+  {% csrf_token %}
+    <div class="row justify-content-center">
+        <div class="col-md-1">Admission</div>
+        <div class="col-md-4">{{ form.sDoa }}</div>
+        <div class="col-md-1">Time</div>
+        <div class="col-md-4">{{ form.sTime }}</div>
+    </div>
+     <div class="row justify-content-center mt-2">
+        <div class="col-md-1">Branch</div>
+        <div class="col-md-4">{{ form.sBranch }}</div>
+        <div class="col-md-1">Attend</div>
+        <div class="col-md-4">{{ form.sAttend }}</div>
+    </div>
+        <div class="row justify-content-center mt-2">
+        <div class="col-md-1">Set no</div>
+        <div class="col-md-4">{{ form.sSetno }}</div>
+        <div class="col-md-1">Course</div>
+        <div class="col-md-4">{{ form.sCourse }}</div>
+    </div>
+      <div class="row justify-content-center mt-2">
+        <div class="col-md-1">DOB</div>
+        <div class="col-md-4">{{ form.sDob }}</div>
+        <div class="col-md-1">Time</div>
+        <div class="col-md-4">{{ form.sPhoto }}</div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-md-1">Name</div>
+        <div class="col-md-4">{{ form.sName }}</div>
+        <div class="col-md-1">F/H N.</div>
+        <div class="col-md-4">{{ form.sFather }}</div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-md-1">Gender</div>
+        <div class="col-md-4">{{ form.sGender }}</div>
+        <div class="col-md-1">Address</div>
+        <div class="col-md-4">{{ form.sAddress }}</div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-md-1">Phone1</div>
+        <div class="col-md-4">{{ form.sPhone1 }}</div>
+        <div class="col-md-1">Phone2</div>
+        <div class="col-md-4">{{ form.sPhone2 }}</div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-md-1">Fee</div>
+        <div class="col-md-4">{{ form.sFee }}</div>
+        <div class="col-md-1">Qualifi.</div>
+        <div class="col-md-4">{{ form.sQualifaction }}</div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-md-1">Comment</div>
+        <div class="col-md-4">{{ form.sComment }}</div>
+        <div class="col-md-1">Exam</div>
+        <div class="col-md-4">{{ form.sExam }}</div>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <div class="col-md-2"><button type="submit" class="btn btn-success"> Submit Date </button></div>
+
+    </div>
+
+
+
+
+    </div>
+</form>
+
+
+
+{% endblock %}
